@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+:root {
+  --font-serif: "Lora", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* Mossy Hollow COZY LIGHT Theme Palette */
+  --bg-color: #F8F9F5;
+  --text-color: #1F2E22;
+  --accent-color: #4F7057;
+  --border-color: #D3DAD1;
+  --card-color: #ECF0E9;
+  --dark-color: #1F2E22;
+  --dark-card: #203123;
+  --highlight-color: #6C8E74;
+  --glowing-accent: rgba(79, 112, 87, 0.25);
+}
+
+.dark {
+  /* Mossy Hollow COZY DARK Theme Palette */
+  --bg-color: #0A0F0B;
+  --text-color: #ECEFEA;
+  --accent-color: #83A98B;
+  --border-color: #1C291E;
+  --card-color: #121914;
+  --dark-color: #ECEFEA;
+  --dark-card: #213526;
+  --highlight-color: #425D48;
+  --glowing-accent: rgba(131, 169, 139, 0.3);
+}
+
+@theme {
+  --color-natural-bg: var(--bg-color);
+  --color-natural-text: var(--text-color);
+  --color-natural-accent: var(--accent-color);
+  --color-natural-border: var(--border-color);
+  --color-natural-card: var(--card-color);
+  --color-natural-dark: var(--dark-color);
+  --color-natural-dark-card: var(--dark-card);
+  --color-natural-highlight: var(--highlight-color);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-serif);
+  transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.4s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.4s ease;
+}
+
+/* Custom Accessibility OpenDyslexic Simulator */
+.font-dyslexic {
+  font-family: "Comic Sans MS", cursive, sans-serif !important;
+  letter-spacing: 0.08em !important;
+  word-spacing: 0.12em !important;
+}
+
+/* Custom interactive effects */
+.glowing-moss-btn {
+  box-shadow: 0 0 12px var(--glowing-accent);
+}
+.glowing-moss-btn:hover {
+  box-shadow: 0 0 20px var(--glowing-accent);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 99px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color);
+}

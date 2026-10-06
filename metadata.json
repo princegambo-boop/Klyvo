@@ -1,0 +1,6 @@
+{
+  "name": "Personal Book Library Tracker",
+  "description": "A warm, literary-themed personal digital bookshelf and reading tracker. Log books, update reading progress, and receive customized recommendations based on favorite genres and authors.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
